@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, { Profiler } from 'react'
+import Img from 'next/image'
 
 
 // Components
@@ -20,20 +20,24 @@ export default function view() {
             <table className="table shadow p-5">
                 <thead className='bg-primary text-light'>
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Action</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='mx-5'>
                     <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td><button className='btn btn-info text-light'>Edit</button></td>
+                        <th scope="row">1</th>
+                        <td>User</td>
+                        <td>User123</td>
+                        <td> <Img src={'/icons/profile.png'} height={50} width={50} /> </td>
+                        <td>
+                            <button className='btn btn-info text-light'>Edit</button> 
+                            <br />  <br />
+                            <button className='btn btn-danger'>Delete</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
